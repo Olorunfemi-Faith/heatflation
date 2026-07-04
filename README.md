@@ -10,10 +10,10 @@ Raw climate and market data contained redundant metadata, structural mismatches,
 <summary>🔍 Click to view Before/After: <b>Food Prices Dataset</b></summary>
 
 #### **Before: Granular Multi-Market Mismatch**
-![Raw food prices data](images/food_prices_raw.png)
+![Raw food prices data](food_price_raw.png)
 
 #### **After: Standardized Monthly Baseline**
-![Clean food prices data](images/food_prices_clean.png)
+![Clean food prices data](food_price_clean.png)
 </details>
 
 <details>
