@@ -30,18 +30,18 @@ Raw climate and market data contained redundant metadata, structural mismatches,
 <summary>🌧️ Click to view Before/After: <b>Rainfall Dataset</b></summary>
 
 #### **Before: Historical Daily Records**
-![Raw Rainfall data](images/rainfall_raw.png)
+![Raw Rainfall data](image/rainfall_raw.png)
 
 #### **After: Monthly Precipitation Baselines**
-![Clean Rainfall data](images/rainfall_clean.png)
+![Clean Rainfall data](image/rainfall_clean.png)
 </details>
 
 <details>
 <summary>📈 Click to view Before/After: <b>CPI (Inflation Index) Dataset</b></summary>
 
 #### **Before: Raw Annual Macro Index**
-![Raw CPI data](images/cpi_raw.png)
+![Raw CPI data](image/cpi_raw.png)
 
 #### **After: Clean Scaled Inflation Mappings**
-![Clean CPI data](images/cpi_clean.png)
+![Clean CPI data](image/cpi_clean.png)
 </details>
