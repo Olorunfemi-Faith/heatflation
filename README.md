@@ -9,27 +9,24 @@ Raw climate and market data contained redundant metadata, structural mismatches,
 <details>
 <summary>🔍 Click to view Before/After: <b>Food Prices Dataset</b></summary>
 
-#### **Data Cleaning Steps Executed**
-To prepare the raw market data, I used Excel to clean, filter, and organize the records using these 7 steps:
-
 #### **Before: Granular Multi-Market Mismatch**
 ![Raw food prices data](image/food_price_raw.png)
 
 #### **After: Standardized Monthly Baseline**
 ![Clean food prices data](image/food_price_clean.png)
 
+#### **Data Cleaning Steps Executed**
+To prepare the raw market data, I used Excel to clean, filter, and organize the records using these 7 steps:
+
 1. **Removed Unnecessary Columns:** Deleted columns that were not needed for the analysis to keep the file clean.
 2. **Filtered by Location:** Filtered the data to focus only on **Kano** and **Kaduna** states.
 3. **Isolated Commodity & Split Units:** Filtered for **White Maize** and separated the text and numbers in the unit column (e.g., turning "100kg" into `100` and `kg`) using this formula:
    ```excel
    =IF(L2="KG", 1, VALUE(SUBSTITUTE(L2, "KG", "")))
-Filtered out Retail: Removed Retail records to focus only on Wholesale data (doing this before splitting the units would have made things more straightforward!).
-
-Split the Date: Separated the full date column to keep only the Month and Year.
-
-Calculated Price Per KG: Created a new column by dividing the total price by the parsed numerical unit.
-
-Aggregated with a Pivot Table: Used a Pivot Table to average and unify the prices where different markets recorded different prices for the same state in the exact same month.
+4. **Filtered out Retail:** Removed Retail records to focus only on Wholesale data (doing this before splitting the units would have made things more straightforward!).
+5. **Split the Date:** Separated the full date column to keep only the Month and Year.
+6. **Calculated Price Per KG:** Created a new column by dividing the total price by the parsed numerical unit.
+7. **Aggregated with a Pivot Table:** Used a Pivot Table to average and unify the prices where different markets recorded different prices for the same state in the exact same month.
 
 </details>
 
