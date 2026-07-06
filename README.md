@@ -6,7 +6,10 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 
 The project was carried out in six distinct phases.
 
-- [x] **Phase 1: Overview/ Clarifying the Problem*"
+- [ ] **Phase 1: Overview/ Clarifying the Problem**
+- [ ] **Phase 2: Data Collection**
+- [ ] **Phase 3: Data Cleaning** (Excel)
+      
 <details>
 <summary> Click to view <b>Phase 1</b> (Excel)</summary>
 
@@ -73,8 +76,15 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 </details>
 
 
+- [ ] **Phase 4: Data Analysis** (SQL)
+
 <details>
 <summary> Click to view <b>Phase 2</b> (SQL)</summary>
    
 **Database Architecture:** [Master SQL Script](./sql.sql)
 </details>
+
+
+- [ ] **Phase 5: Pattern Recognition** (Python)
+      
+- [ ] **Phase 6: Data Visualization and Storytelling**
