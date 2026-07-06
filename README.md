@@ -59,3 +59,6 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 #### **After: Clean Scaled Inflation Mappings**
 ![Clean CPI data](excel/cpi_clean.png)
 </details>
+
+
+**Database Architecture:** [Master SQL Script](./sql.sql)
