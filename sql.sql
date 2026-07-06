@@ -133,3 +133,29 @@ SELECT
     ROUND((price_per_kg / NULLIF(cpi, 0)) * 100, 2) AS real_price_per_kg
 FROM 
     v1_join;
+
+
+-- ========================================================
+-- STEP 4: CREATE ANOMALY TABLE (v3_base)
+-- ========================================================
+-- This creates a physical table that computes and stores weather anomalies
+-- for every single row, giving you a fast baseline for your step-by-step analysis.
+
+CREATE TABLE v3_base AS
+SELECT 
+    state,
+    year,
+    month,
+    actu_vim,
+    hist_vim,
+    -- Calculate vegetation anomaly (Negative means drop)
+    ROUND(actu_vim - hist_vim, 4) AS vim_anomaly,
+    actu_rfh,
+    hist_rfh,
+    -- Calculate rainfall anomaly (Negative means drought/less rain)
+    ROUND(actu_rfh - hist_rfh, 2) AS rfh_anomaly,
+    nominal_price_per_kg,
+    cpi,
+    real_price_per_kg
+FROM 
+    v2_base;
