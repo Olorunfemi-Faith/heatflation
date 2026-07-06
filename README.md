@@ -6,6 +6,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 
 The project was carried out in six distinct phases.
 
+- [x] **Phase 1: Overview/ Clarifying the Problem*"
 <details>
 <summary> Click to view <b>Phase 1</b> (Excel)</summary>
 
