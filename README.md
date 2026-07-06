@@ -15,7 +15,7 @@ This project was carried out in six distinct phases.
 
 
 
-- [ ] **Phase 1: Overview/ Clarifying the Problem**
+- [ ] **Phase 1: Project Overview**
 <details>
 <summary><kbd> view phase 1 </kbd></summary>
 </details>
@@ -60,6 +60,18 @@ Raw climate and market data contained redundant metadata, structural mismatches,
 
 <details>
 <summary><kbd> Cleaning Food Prices Dataset</kbd></summary>
+
+<table>
+      <tr>
+            <td><b> Before Cleaning </b></td>
+            <td><b> After Cleaning </b></td>
+      </tr>
+      <tr>
+            <td><img scr= "excel/food_price_raw.png" width ="400"></td>
+            <td><img scr= "excel/food_price_clean.png
+" width ="400"></td>
+      </tr>
+</table>
 
 #### **Before: Granular Multi-Market Mismatch**
 ![Raw food prices data](excel/food_price_raw.png)
