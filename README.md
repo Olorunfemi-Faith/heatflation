@@ -5,7 +5,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 To prepare our four distinct datasets (Food Prices, NDVI, Rainfall, and CPI) for analytical modeling, a structured multi-stage ETL pipeline was executed across Excel and PostgreSQL.
 
 <details>
-<summary> Click to view <b>Excel Data Cleaning (Phase 1)</b></summary>
+<summary> Click to view <b>Phase 1</b>(Excel)</summary>
 
    
 ### Phase 1: Excel Data Cleaning 
@@ -68,7 +68,7 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 
 <details>
-<summary> Click to view <b>SQL Pipeline (Phase 2)</b></summary>
+<summary> Click to view <b>(Phase 2)</b>(SQL)</summary>
    
 **Database Architecture:** [Master SQL Script](./sql.sql)
 </details>
