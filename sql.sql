@@ -26,6 +26,15 @@ CREATE TABLE ndvi (
     PRIMARY KEY (state, year, month)
 );
 
+CREATE TABLE rainfall (
+    state VARCHAR, 
+    year INT, 
+    month INT, 
+    actu_rfh NUMERIC, 
+    hist_rfh NUMERIC, 
+    PRIMARY KEY (state, year, month)
+);
+
 
 
 
@@ -64,3 +73,40 @@ CREATE TABLE rainfall (
     hist_rfh NUMERIC, 
     PRIMARY KEY (state, year, month)
 );
+
+
+
+-- ========================================================
+-- STEP 3: DATA INTEGRATION (LEFT JOIN)
+-- ========================================================
+-- We start with the NDVI table as our baseline to protect weather records.
+-- Then we cleanly layer on rainfall, food prices, and CPI one by one.
+
+CREATE VIEW v1_combined_raw_base AS
+SELECT 
+    n.state,
+    n.year,
+    n.month,
+    n.actu_vim,
+    n.hist_vim,
+    r.actu_rfh,
+    r.hist_rfh,
+    f.unit_value,
+    f.unit_measure,
+    f.price_per_kg,
+    c.cpi
+FROM 
+    ndvi n
+LEFT JOIN 
+    rainfall r 
+    ON n.state = r.state 
+    AND n.year = r.year 
+    AND n.month = r.month
+LEFT JOIN 
+    food_prices f 
+    ON n.state = f.state 
+    AND n.year = f.year 
+    AND n.month = f.month
+LEFT JOIN 
+    cpi c 
+    ON n.year = c.year;
