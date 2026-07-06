@@ -158,4 +158,41 @@ FROM
 
 
 
+-- ========================================================
+-- STEP 5: BACKWARD TRACEABILITY LAG PIPELINE (v4_trace_pipeline)
+-- ========================================================
+-- This table starts at the current market price and projects backward:
+-- 1. Economic Lookback: What was the vegetation doing 1, 2, 3, and 4 months ago?
+-- 2. Biological Lookback: What was the rainfall doing 1, 2, 3, and 4 months ago?
+
+CREATE TABLE v4_trace_pipeline AS
+SELECT 
+    state,
+    year,
+    month,
+    real_price_per_kg AS current_real_price,
+    
+    -- Calculate the percentage price spike above the state's historical average
+    ROUND(
+        ((real_price_per_kg - AVG(real_price_per_kg) OVER(PARTITION BY state)) 
+        / AVG(real_price_per_kg) OVER(PARTITION BY state)) * 100, 2
+    ) AS real_price_spike_percent,
+    
+    -- Current conditions for reference
+    vim_anomaly AS current_vim_anomaly,
+    rfh_anomaly AS current_rfh_anomaly,
+    
+    -- STAGE 1: ECONOMIC LOOKBACK (Looking back from today's price to past vegetation)
+    LAG(vim_anomaly, 1) OVER(PARTITION BY state ORDER BY year, month) AS vim_1m_ago,
+    LAG(vim_anomaly, 2) OVER(PARTITION BY state ORDER BY year, month) AS vim_2m_ago,
+    LAG(vim_anomaly, 3) OVER(PARTITION BY state ORDER BY year, month) AS vim_3m_ago,
+    LAG(vim_anomaly, 4) OVER(PARTITION BY state ORDER BY year, month) AS vim_4m_ago,
+    
+    -- STAGE 2: BIOLOGICAL LOOKBACK (Looking back from today's vegetation to past rainfall)
+    LAG(rfh_anomaly, 1) OVER(PARTITION BY state ORDER BY year, month) AS rfh_1m_ago,
+    LAG(rfh_anomaly, 2) OVER(PARTITION BY state ORDER BY year, month) AS rfh_2m_ago,
+    LAG(rfh_anomaly, 3) OVER(PARTITION BY state ORDER BY year, month) AS rfh_3m_ago,
+    LAG(rfh_anomaly, 4) OVER(PARTITION BY state ORDER BY year, month) AS rfh_4m_ago
+FROM 
+    v3_base;
 
