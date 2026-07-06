@@ -110,3 +110,26 @@ LEFT JOIN
 LEFT JOIN 
     cpi c 
     ON n.year = c.year;
+
+
+
+-- ========================================================
+-- STEP 4: INFLATION ADJUSTMENT (REAL PRICE CALCULATION)
+-- ========================================================
+-- This view calculates the real price 
+
+CREATE VIEW v2_join AS
+SELECT 
+    state,
+    year,
+    month,
+    actu_vim,
+    hist_vim,
+    actu_rfh,
+    hist_rfh,
+    price_per_kg AS nominal_price_per_kg,
+    cpi,
+    -- Calculate real price safely without filtering any rows out
+    ROUND((price_per_kg / NULLIF(cpi, 0)) * 100, 2) AS real_price_per_kg
+FROM 
+    v1_join;
