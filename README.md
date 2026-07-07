@@ -77,12 +77,6 @@ Raw climate and market data contained redundant metadata, structural mismatches,
 </table>
 
 
-#### **Before Cleaning**
-![Raw food prices data](excel/food_price_raw.png)
-
-#### **After Cleaning**
-![Clean food prices data](excel/food_price_clean.png)
-
 #### **Data Cleaning Steps Executed**
 To prepare the raw market data, I used Excel to clean, filter, and organize the records using these 7 steps:
 
@@ -101,6 +95,21 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 <details>
 <summary><kbd> Cleaning NDVI Dataset</kbd></summary>
 
+<table>
+  <tr>
+    <th width="50%"><b>Before Cleaning</b></th>
+    <th width="50%"><b>After Cleaning</b></th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="excel/ndvi_raw.png" alt="Before Cleaning Data" width="100%">
+    </td>
+    <td valign="top">
+      <img src="excel/ndvi_clean.png" alt="After Cleaning Data" width="100%">
+    </td>
+  </tr>
+</table>
+
 #### **Before: Cleaning**
 ![Raw NDVI data](excel/ndvi_raw.png)
 
@@ -111,6 +120,22 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 <details>
 <summary><kbd> Cleaning Rainfall Dataset</kbd></summary>
 
+<table>
+  <tr>
+    <th width="50%"><b>Before Cleaning</b></th>
+    <th width="50%"><b>After Cleaning</b></th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="excel/rainfall_raw.png" alt="Before Cleaning Data" width="100%">
+    </td>
+    <td valign="top">
+      <img src="excel/rainfall_clean.png" alt="After Cleaning Data" width="100%">
+    </td>
+  </tr>
+</table>
+
+
 #### **Before Cleaning **
 ![Raw Rainfall data](excel/rainfall_raw.png)
 
@@ -118,8 +143,25 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 ![Clean Rainfall data](excel/rainfall_clean.png)
 </details>
 
+
+
 <details>
 <summary><kbd> Cleaning CPI Dataset</kbd></summary>
+
+<table>
+  <tr>
+    <th width="50%"><b>Before Cleaning</b></th>
+    <th width="50%"><b>After Cleaning</b></th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="excel/cpi_raw.png" alt="Before Cleaning Data" width="100%">
+    </td>
+    <td valign="top">
+      <img src="excel/cpi_clean.png" alt="After Cleaning Data" width="100%">
+    </td>
+  </tr>
+</table>
 
 #### **Before Cleaning**
 ![Raw CPI data](excel/cpi_raw.png)
