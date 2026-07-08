@@ -19,7 +19,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 <summary><kbd> view phase 1 </kbd></summary>
 </details>
 
-
+<br>
 
 
 
@@ -31,7 +31,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 <summary><kbd> view phase 2 </kbd></summary>
 </details>   
 
-
+<br>
 
 
 
@@ -152,7 +152,7 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 </details>
 </details>
 
-
+<br>
 
 
 
@@ -167,7 +167,7 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 </details>
 
 
-
+<br>
 
 
 
@@ -177,7 +177,7 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 </details>
 
 
-
+<br>
 
 
  
@@ -185,6 +185,8 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 <details>
 <summary><kbd> view phase 6 </kbd></summary>
 </details>
+
+<br>
 
 
 <details>
