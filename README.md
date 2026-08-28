@@ -80,6 +80,49 @@ In econometrics, shocks rarely impact markets instantaneously. Following **Woold
 - [ ] Phase 2: **Data Collection**
 <details>
 <summary><kbd> view phase 2 </kbd></summary>
+
+### Phase 2: Data Collection & Assembly
+
+#### 1. Data Requirements & Structure
+Following Wooldridge’s framework for empirical analysis, testing a Distributed Lag Model requires structured **time-series cross-sectional (panel) data**. To evaluate how climate anomalies affect white maize prices in Northern Nigeria, data was gathered across two main domains at a monthly frequency:
+
+* **Timeframe:** Multi-year monthly historical records.
+* **Spatial Granularity:** State-level aggregation focusing on key northern agricultural hubs (**Kano** and **Katsina**).
+* **Observation Unit:** State-Month pairs (e.g., `Kano_2022_05`).
+
+---
+
+#### 2. Secondary Data Sources
+Data was retrieved from two primary secondary sources to merge environmental metrics with macroeconomic price trends:
+
+* **Climate & Vegetation Data (CHIRPS & MODIS / WFP Datastream):**
+  * **Rainfall (RFH):** Satellite-derived monthly rainfall totals and historical baseline averages used to calculate rainfall anomalies (`rfh_anomaly`).
+  * **Vegetation Index Margin (VIM):** Normalized Difference Vegetation Index (NDVI) anomaly data (`vim_anomaly`) to capture agricultural plant health and crop stress relative to long-term seasonal norms.
+  
+* **Market & Price Data (WFP VAM / FEWS NET):**
+  * **Wholesale & Retail Prices:** Nominal monthly prices per kilogram for **white maize** in local markets across Kano and Katsina.
+  * **Consumer Price Index (CPI):** Macroeconomic inflation metrics used to deflate nominal prices into real prices (`current_real_price`), isolating weather-induced shocks from general currency inflation.
+
+---
+
+#### 3. Constructing the Lagged Features
+To prepare the dataset for lag estimation (Step 1 & Step 2 transmission modeling), time-series transformations were applied during collection:
+
+* **Temporal Alignment:** Monthly market data was aligned chronologically with preceding climate observations.
+* **Lag Features Generated:** For each state-month record, explicit look-back columns were generated for $t-1, t-2, t-3,$ and $t-4$ months for both rainfall (`rfh_1m_ago` ... `rfh_4m_ago`) and vegetation health (`vim_1m_ago` ... `vim_4m_ago`).
+
+---
+
+#### 4. Summary of Raw Features
+
+| Feature Name | Description | Source | Variable Role |
+| :--- | :--- | :--- | :--- |
+| `state` / `date` | Geographic identifier and monthly timestamp | WFP / FEWS NET | Panel Index |
+| `rfh_anomaly` | Deviation of rainfall from historical monthly mean | CHIRPS | Independent ($X_1$) |
+| `vim_anomaly` | Deviation of vegetation health from historical mean | MODIS / NDVI | Independent ($X_2$) |
+| `nominal_price` | Raw market retail price for white maize (NGN/kg) | WFP VAM | Raw Input |
+| `real_price_spike_percent` | Inflation-adjusted price percentage change vs. baseline | Calculated | Dependent ($Y$) |
+ 
 </details>   
 
 <br>
