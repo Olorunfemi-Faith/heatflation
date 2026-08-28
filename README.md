@@ -22,8 +22,11 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 ### Phase 1: The Problem (Theoretical & Empirical Framework)
 
 #### 1. What is Heatflation?
-"Heatflation" is a recently coined term used in modern economic discourse to describe food price inflation driven directly by extreme heat, drought, and climate shocks.  In Nigeria, food prices have skyrocketed in recent years, placing immense pressure on household budgets. However, macroeconomic factors like currency devaluation, fuel subsidy removal, and transport costs also drive inflation. The core goal of this project is to empirically test if and to what extent climate anomalies actually impact white maize
+"Heatflation" is a recently coined term used in modern economic discourse to describe food price inflation driven directly by extreme heat, drought, and climate shocks. 
+
+In Nigeria, food prices have skyrocketed in recent years, placing immense pressure on household budgets. However, macroeconomic factors like currency devaluation, fuel subsidy removal, and transport costs also drive inflation. The core goal of this project is to empirically test if and to what extent climate anomalies actually impact white maize
 in Kaduna and Kano state, Nigeria.
+
 ---
 
 #### 2. Goals of the Project
