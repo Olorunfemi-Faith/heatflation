@@ -22,51 +22,25 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 ### Phase 1: The Problem (Theoretical & Empirical Framework)
 
 #### 1. What is Heatflation?
-"Heatflation" refers to inflation driven directly by extreme heat, drought, and climate shocks. In agricultural economics, it describes the process where severe weather reduces crop yields, creates supply deficits in local markets, and causes food prices to surge.
+Heatflation" is a recently coined term used in modern economic discourse to describe food price inflation driven directly by extreme heat, drought, and climate shocks. 
 
+In Nigeria, food prices have skyrocketed in recent years, placing immense pressure on household budgets. However, macroeconomic factors like currency devaluation, fuel subsidy removal, and transport costs also drive inflation. The core goal of this project is to empirically test if and to what extent climate anomalies actually impact white maize .
+in Kaduna and Kano state, Nigeria.
 ---
 
 #### 2. Goals of the Project
-Following **Wooldridge’s framework for empirical economic analysis**, this project aims to:
-* **Quantify the Shock:** Measure how severe weather anomalies impact real grain prices.
-* **Identify the Lag:** Determine the exact timeline (transmission delay) between a weather event, crop stress, and market price spikes.
-* **Establish Baselines:** Compare market prices during normal climate seasons against intense drought periods.
+This project sets out to answer three simple questions:
 
----
+* **Find the Price Change:** Calculate how much grain prices actually rise or fall when bad weather hits.
+* **Map the Timeline:** Figure out how long it takes for a weather shock (low rain or poor plant health) to fully hit market prices.
+* **Compare Normal vs. Crisis:** Check what maize prices look like during a normal, healthy season versus a period of intense drought.
 
-#### 3. Selection of Variables & Scope
-To keep the econometric model focused and controlled, specific scope choices were made:
-* **Commodity (White Maize):** White maize was selected because it is a critical staple grain in Northern Nigeria, acting as a primary food source for households and a key indicator of regional food security.
-* **Geographic Scope (Kano & Katsina States):** These two northern states were chosen due to their high vulnerability to Sahelian drought patterns and their roles as major grain production and market hubs in the region.
-
----
-
-#### 4. Econometric Model Variables
-To model the relationship, variables were defined as follows:
-
-* **Dependent Variable ($Y$):** 
-  * `real_price_spike_percent`: The percentage change in inflation-adjusted grain prices relative to historical baselines.
-* **Independent Variables ($X$):**
-  * `rfh_anomaly`: Rainfall anomaly (meteorological shock).
-  * `vim_anomaly`: Vegetation Index Margin anomaly (agricultural/crop health shock).
-  * **Lagged Terms:** Both independent variables are tracked at $t-1, t-2, t-3,$ and $t-4$ months to capture delayed impacts.
-
----
-
-#### 5. Data Retrieval & Matching
-To build a dataset suitable for empirical analysis, secondary data was pulled and merged across matching timeframes (monthly level) and spatial boundaries (state level):
-* **Climate Data:** Satellite-derived rainfall and vegetation health anomalies to measure environmental deviations from historical norms.
-* **Market Data:** Local retail and wholesale real prices for white maize across Kano and Katsina.
-
----
-
-#### 6. Biological vs. Economic Lags
-In econometrics, shocks rarely impact markets instantaneously. Following **Wooldridge's Distributed Lag Model**, the total response is split into two distinct physical processes:
-
-* **Biological Lag (Rainfall to Soil/Crop Response):** 
-  * *The Mechanism:* It takes roughly 30 days ($t-1$) for rainfall deficits to physically affect soil moisture, stunt crop growth, and register on satellite vegetation sensors (VIM).
-* **Economic Lag (Crop Failure to Market Price Shock):** 
-  * *The Mechanism:* When crops fail, prices do not spike immediately because traders and households consume existing food reserves. It takes approximately 60 days ($t-2$) for storage reserves to run out, at which point the supply deficit hits the market at full force and triggers peak price inflation.
+#### 3. Scope & Variables
+* **Commodity:** White Maize (a core staple grain and food security indicator).
+* **Location:** Kaduna & Kano State (key grain production and trading hubs in Northern Nigeria).
+* **Macroeconomic Control (CPI):** Consumer Price Index used to deflate nominal prices into real prices, isolating weather impacts from general currency inflation.
+* **Dependent Variable ($y_t$):** Real price percentage change (`real_price_spike_percent`), adjusted using CPI.
+* **Independent Variables ($x_t$):** Rainfall anomaly (`rfh_anomaly`) and Vegetation anomaly (`vim_anomaly`).
 
 </details>
 
