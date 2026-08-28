@@ -61,10 +61,14 @@ This project sets out to answer three simple questions:
 We constructed a monthly panel dataset combining satellite climate metrics and macroeconomic market data across **Kaduna and Kano State**.
 
  The 4 Secondary Data Sources
-* **Rainfall Data:** Monthly rainfall totals used to calculate rainfall anomalies (`rfh_anomaly`).  https://data.humdata.org/dataset/nga-rainfall-subnational
-* **Vegetation Data:** Satellite crop health metrics used to calculate vegetation anomalies (`vim_anomaly`). https://data.humdata.org/dataset/wfp-food-prices-for-nigeria
-* **Market Price Data:** Retail white maize prices (NGN/kg) in Kaduna and Kano markets. 
-* **Inflation Data:** Consumer Price Index (CPI) used to convert nominal prices into real prices.
+* **Rainfall Data (CHIRPS / HDX):** Monthly rainfall totals used to calculate rainfall anomalies (`rfh_anomaly`).  
+  🔗 [HDX Nigeria Subnational Rainfall Data](https://data.humdata.org/dataset/nga-rainfall-subnational)
+* **Vegetation Data (MODIS / WFP Datastream):** Satellite crop health metrics (NDVI) used to calculate vegetation index margin anomalies (`vim_anomaly`).  
+  🔗 [WFP VAM DataViz / Seasonal Explorer](https://dataviz.vam.wfp.org/)
+* **Market Price Data (WFP VAM / HDX):** Retail white maize prices (NGN/kg) in Kaduna and Kano markets.  
+  🔗 [HDX WFP Food Prices for Nigeria](https://data.humdata.org/dataset/wfp-food-prices-for-nigeria)
+* **Inflation Data (Nigeria NBS):** Consumer Price Index (CPI) used to convert nominal prices into real prices.  
+  🔗 [National Bureau of Statistics (NBS) CPI Reports](https://nigerianstat.gov.ng/)
  
 </details>   
 
