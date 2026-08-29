@@ -237,7 +237,20 @@ SELECT
     rfh_4m_ago
 FROM v4_trace_pipeline;
 
--- Stage 6: Preview the resulting table structure and feature ordering
+
+
+-- ========================================================
+-- STEP 7:deleting empty rows
+-- ========================================================
+DELETE FROM v6_trace_pipeline WHERE log_real_price IS NULL;
+
+
+-- Step 2: Ensure changes are committed to the database
+COMMIT;
+
+-- Step 3: Create a clean, final table (v7) for your Python analysis
+DROP TABLE IF EXISTS v7_heatflation_model;
+
+CREATE TABLE v7_heatflation_model AS
 SELECT * 
-FROM v6_trace_pipeline
-LIMIT 10;
+FROM v6_trace_pipeline;
