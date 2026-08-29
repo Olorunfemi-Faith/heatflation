@@ -251,6 +251,6 @@ COMMIT;
 -- Step 3: Create a clean, final table (v7) for your Python analysis
 DROP TABLE IF EXISTS v7_heatflation_model;
 
-CREATE TABLE v7_heatflation_model AS
+CREATE TABLE fin_heat AS
 SELECT * 
 FROM v6_trace_pipeline;
