@@ -196,3 +196,48 @@ SELECT
 FROM 
     v3_base;
 
+-- ========================================================
+-- STEP 6:Finding Log of Real price
+-- ========================================================
+
+
+-- Stage 1: Add the new log column to the base table
+ALTER TABLE v4_trace_pipeline 
+ADD COLUMN IF NOT EXISTS log_real_price numeric;
+
+-- Stage 2: Compute natural log for valid positive price records
+UPDATE v4_trace_pipeline 
+SET log_real_price = LN(current_real_price)
+WHERE current_real_price IS NOT NULL AND current_real_price > 0;
+
+-- Stage 3: Safely drop the old percentage spike column if it exists
+ALTER TABLE v4_trace_pipeline 
+DROP COLUMN IF EXISTS real_price_spike_percent;
+
+-- Stage 4: Drop v6 table first if it already exists to avoid creation conflicts
+DROP TABLE IF EXISTS v6_trace_pipeline;
+
+-- Stage 5: Build clean v6 table with log_real_price ordered next to current_real_price
+CREATE TABLE v6_trace_pipeline AS
+SELECT 
+    state,
+    year,
+    month,
+    current_real_price,
+    log_real_price,
+    current_vim_anomaly,
+    current_rfh_anomaly,
+    vim_1m_ago,
+    vim_2m_ago,
+    vim_3m_ago,
+    vim_4m_ago,
+    rfh_1m_ago,
+    rfh_2m_ago,
+    rfh_3m_ago,
+    rfh_4m_ago
+FROM v4_trace_pipeline;
+
+-- Stage 6: Preview the resulting table structure and feature ordering
+SELECT * 
+FROM v6_trace_pipeline
+LIMIT 10;
