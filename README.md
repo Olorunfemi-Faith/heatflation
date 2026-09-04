@@ -138,20 +138,13 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 <br>
 
-<table>
-  <tr>
-    <th width="50%"><b>Before Cleaning</b></th>
-    <th width="50%"><b>After Cleaning</b></th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="excel/ndvi_raw_1.png" alt="Before Cleaning Data" width="100%">
-    </td>
-    <td valign="top">
-      <img src="excel/ndvi_clean_1.png" alt="After Cleaning Data" width="100%">
-    </td>
-  </tr>
-</table>
+**Before Cleaning (Raw NDVI Data)**
+![Before Cleaning NDVI Data](./excel/ndvi_raw_1.png)
+
+---
+
+**After Cleaning (Processed NDVI Data)**
+![After Cleaning NDVI Data](./excel/ndvi_clean_1.png)
 
 </details>
 
@@ -160,20 +153,13 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 <br>
 
-<table>
-  <tr>
-    <th width="50%"><b>Before Cleaning</b></th>
-    <th width="50%"><b>After Cleaning</b></th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="excel/rainfall_raw_1.png" alt="Before Cleaning Data" width="100%">
-    </td>
-    <td valign="top">
-      <img src="excel/rainfall_clean_1.png" alt="After Cleaning Data" width="100%">
-    </td>
-  </tr>
-</table>
+**Before Cleaning (Raw Rainfall Data)**
+![Before Cleaning Rainfall Data](./excel/rainfall_raw_1.png)
+
+---
+
+**After Cleaning (Processed Rainfall Data)**
+![After Cleaning Rainfall Data](./excel/rainfall_clean_1.png)
 
 </details>
 
@@ -184,20 +170,13 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 <br>
 
-<table>
-  <tr>
-    <th width="50%"><b>Before Cleaning</b></th>
-    <th width="50%"><b>After Cleaning</b></th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="excel/cpi_raw_2.png" alt="Before Cleaning Data" width="100%">
-    </td>
-    <td valign="top">
-      <img src="excel/cpi_clean_1.png" alt="After Cleaning Data" width="100%">
-    </td>
-  </tr>
-</table>
+**Before Cleaning (Raw CPI Data)**
+![Before Cleaning CPI Data](./excel/cpi_raw_2.png)
+
+---
+
+**After Cleaning (Processed CPI Data)**
+![After Cleaning CPI Data](./excel/cpi_clean_1.png)
 
 </details>
 </details>
