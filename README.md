@@ -256,7 +256,22 @@ This phase translates our quantitative findings into publication-ready visual mo
 * **Primary Notebook:** [`Heatflation_python.ipynb`](./Heatflation_python.ipynb)
 
 #### Core Visualizations:
+#### 1. Biological and Economic Transmission Lags
+![Transmission Lags](./images/lag.png)
+* **Biological Transmission Buffer:** A 1-month delay occurs between rainfall deficits ($\text{RFH}_{t-1}$) and observable crop health decline ($\text{VIM}_t$).
+* **Economic Transmission Buffer:** A 3–4 month delay occurs between crop stress ($\text{VIM}_{t-3/t-4}$) and retail white maize price spikes ($\text{Log Real Price}_t$).
 
+#### 2. Spatial Market Divergence (State-Level Analysis)
+![State Comparison](./images/state.png)
+* Highlights regional price dispersion, contrasting market insulation and supply chain resiliency between major agricultural hubs (e.g., Kaduna vs. Kano).
+
+#### 3. Seasonal Heatflation Profile
+![Seasonal Trends](./images/months.png)
+* Pinpoints peak heatflation months to show when household purchasing power is most severely impacted ahead of harvest periods.
+
+#### 4. Structural Vulnerability Trajectory ($\beta$)
+![Rolling Sensitivity](./images/sensitivity.png)
+* **Non-Linear Transmission:** Dips below zero mark periods where local drought shocks directly drove food inflation. Spikes above zero reflect periods where national macroeconomic shocks overwhelmed local climate signals.
 
 
 
