@@ -15,33 +15,41 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 
 
 
-- [x] Phase 1: **The Problem**
-<details>
-<summary><kbd> view phase 1 </kbd></summary>
-
-### Phase 1: The Problem (Theoretical & Empirical Framework)
+- ### Phase 1: Overview & Framework
 
 #### 1. What is Heatflation?
-"Heatflation" is a recently coined term used in modern economic discourse to describe food price inflation driven directly by extreme heat, drought, and climate shocks. 
-
-In Nigeria, food prices have skyrocketed in recent years, placing immense pressure on household budgets. However, macroeconomic factors like currency devaluation, fuel subsidy removal, and transport costs also drive inflation. The core goal of this project is to empirically test if and to what extent climate anomalies actually impact white maize
-in Kaduna and Kano state, Nigeria.
+"Heatflation" is a term coined in recent economic literature to describe food price inflation driven directly by extreme weather, droughts, and climate anomalies. While general inflation in Nigeria is often linked to currency devaluation or fuel costs, heatflation specifically isolates how weather shocks disrupt crop yields and drive up food prices in local markets.
 
 ---
 
-#### 2. Goals of the Project
-This project sets out to answer three simple questions:
+#### 2. Scope of the Project
+* **Place (Kaduna & Kano):** These two states were selected because they serve as the primary grain production hubs and major commercial trading centers in Northern Nigeria, making them ideal representatives for regional food supply chains.
+* **Timeframe & Lag:** The analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact temporal coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to test transmission lags—measuring how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
+* **Commodity (White Maize):** White maize was chosen for four key reasons:
+  1. It had the highest data reporting frequency across historical market records.
+  2. It is a deeply rooted staple food consumed across households.
+  3. It is highly sensitive to weather variations during critical growing stages.
+  4. Its crop cycle is strictly bound to seasonal rainfall patterns.
+* **Variables:**
+  * **Real Price ($y_t$):** Nominal prices adjusted using the Consumer Price Index (CPI) to remove general currency inflation and isolate weather impacts.
+  * **Rainfall Anomaly ($\text{RFH}_t$):** Measures deviations from long-term rainfall averages to identify drought conditions.
+  * **Vegetation Anomaly ($\text{VIM}_t$):** Measures satellite-derived plant health deficits to track real-time crop stress.
 
-* **Find the Price Change:** Calculate how much grain prices actually rise or fall when bad weather hits.
-* **Map the Timeline:** Figure out how long it takes for a weather shock (low rain or poor plant health) to fully hit market prices.
-* **Compare Normal vs. Crisis:** Check what maize prices look like during a normal, healthy season versus a period of intense drought.
+---
 
-#### 3. Scope & Variables
-* **Commodity:** White Maize (a core staple grain and food security indicator).
-* **Location:** Kaduna & Kano State (key grain production and trading hubs in Northern Nigeria).
-* **Macroeconomic Control (CPI):** Consumer Price Index used to deflate nominal prices into real prices, isolating weather impacts from general currency inflation.
-* **Dependent Variable ($y_t$):** Real price percentage change (`real_price_spike_percent`), adjusted using CPI.
-* **Independent Variables ($x_t$):** Rainfall anomaly (`rfh_anomaly`) and Vegetation anomaly (`vim_anomaly`).
+#### 3. Goals of the Project
+The primary goal of this project is to build an empirical, data-driven narrative supported by five core visual models:
+1. **Biological & Economic Lags:** Map the 1-month biological delay (rain to crop health) and the 3–4 month economic delay (crop health to retail price spikes).
+2. **Spatial Divergence:** Compare price insulation and market resiliency between Kaduna and Kano states.
+3. **Seasonal Vulnerability:** Identify peak heatflation months ahead of harvest cycles to highlight household risk windows.
+4. **Historical Price Spikes:** Track annual real price trajectories over two decades to pin down major historical shock years.
+5. **Structural Vulnerability ($\beta$):** Analyze rolling 5-year price sensitivity to demonstrate how local drought impacts interact with national macroeconomic conditions over time.
+
+---
+
+#### 4. Problems Encountered
+* **Data Sourcing & Alignment:** Merging satellite climate measurements with ground-level retail market price records required handling missing entries and harmonizing different spatial and temporal scales.
+* **Data Cleaning & Standardization:** CPI metrics had to be matched across multiple base-year revisions to correctly convert nominal prices into inflation-adjusted real prices over a 20-year span.
 
 </details>
 
