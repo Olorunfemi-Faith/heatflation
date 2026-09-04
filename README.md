@@ -228,7 +228,7 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 In this phase, we analyze the multi-stage transmission of rainfall anomalies to grain market price inflation using time-series econometrics and exploratory visualization.
 
-* **Primary Notebook:** [`Heatflation_fin.ipynb`](./Heatflation_fin.ipynb)
+* **Primary Notebook:** [`Heatflation_python`](./Heatflation_python.ipynb)
 
 #### Key Empirical Analytical Steps:
 1. **Database Extraction:** Querying structured time-series data directly from PostgreSQL via Pandas (`pd.read_sql_query`).
