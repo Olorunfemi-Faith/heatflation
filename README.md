@@ -224,16 +224,19 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 <details>
 <summary><kbd> view phase 5 </kbd></summary>
 
-### Python Notebook & Econometric Modeling
+### Phase 5: Pattern Recognition & Econometric Modeling
 
-All regression models, rolling sensitivity plots ($\beta$), and price-elasticity analyses are fully documented in the interactive notebook:
+In this phase, we analyze the multi-stage transmission of rainfall anomalies to grain market price inflation using time-series econometrics and exploratory visualization.
 
- **[View the Complete Heatflation Analysis Notebook](./python.ipynb)**
+* **Primary Notebook:** [`Heatflation_fin.ipynb`](./Heatflation_fin.ipynb)
 
-#### Key Highlights Covered:
-* **Two-Stage Lag Chains:** Mapping climate anomaly transmission over time.
-* **Rolling 5-Year Elasticity:** Empirical proof of structural market vulnerability.
-* **CPI Deflation:** Isolating weather impacts from general currency inflation.
+#### Key Empirical Analytical Steps:
+1. **Database Extraction:** Querying structured time-series data directly from PostgreSQL via Pandas (`pd.read_sql_query`).
+2. **Lagged Correlation Matrix:** Quantifying the two-stage transmission mechanism:
+   * **Biological Transmission Lag:** Rainfall deficits ($\text{RFH}_{t-1}$) impacting vegetation health ($\text{VIM}_t$).
+   * **Economic Transmission Lag:** Vegetation health shocks ($\text{VIM}_{t-3/t-4}$) driving real market price spikes ($\text{Log Real Price}_t$).
+3. **Comparative Spatial & Seasonal Analysis:** Evaluating price vulnerability across Kaduna vs. Kano states and identifying seasonal peak heatflation months.
+4. **Structural Vulnerability Modeling:** Estimating a 5-year rolling sensitivity coefficient ($\beta$) to measure evolving market susceptibility to climate shocks over time.
 
 </details>
 
