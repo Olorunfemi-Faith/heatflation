@@ -220,9 +220,21 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 
 
-- [ ] Phase 5: **Pattern Recognition** (Python)
+- [x] Phase 5: **Pattern Recognition** (Python)
 <details>
 <summary><kbd> view phase 5 </kbd></summary>
+
+### Python Notebook & Econometric Modeling
+
+All regression models, rolling sensitivity plots ($\beta$), and price-elasticity analyses are fully documented in the interactive notebook:
+
+ **[View the Complete Heatflation Analysis Notebook](./python.ipynb)**
+
+#### Key Highlights Covered:
+* **Two-Stage Lag Chains:** Mapping climate anomaly transmission over time.
+* **Rolling 5-Year Elasticity:** Empirical proof of structural market vulnerability.
+* **CPI Deflation:** Isolating weather impacts from general currency inflation.
+
 </details>
 
 
