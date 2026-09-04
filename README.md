@@ -14,7 +14,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 
 
 
-[ ] Phase 1: **Overview & Framework**
+- [ ] Phase 1: **Overview & Framework**
 <details>
 <summary><kbd> view phase 1 </kbd></summary>
 - ### Phase 1: Overview & Framework
