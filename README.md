@@ -269,7 +269,11 @@ This phase translates our quantitative findings into publication-ready visual mo
 ![Seasonal Trends](./images/months.png)
 * Pinpoints peak heatflation months to show when household purchasing power is most severely impacted ahead of harvest periods.
 
-#### 4. Structural Vulnerability Trajectory ($\beta$)
+### 4. Long-Term Yearly Price Spikes
+![Yearly Trends](./images/years.png)
+* Illustrates historical year-over-year real price volatility and highlights major drought-driven price spike years across the two-decade sample period.
+
+#### 5. Structural Vulnerability Trajectory ($\beta$)
 ![Rolling Sensitivity](./images/sensitivity.png)
 * **Non-Linear Transmission:** Dips below zero mark periods where local drought shocks directly drove food inflation. Spikes above zero reflect periods where national macroeconomic shocks overwhelmed local climate signals.
 
