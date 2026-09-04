@@ -248,6 +248,18 @@ In this phase, we analyze the multi-stage transmission of rainfall anomalies to 
 - [ ] Phase 6: **Data Visualization**
 <details>
 <summary><kbd> view phase 6 </kbd></summary>
+
+ ### Phase 6: Data Visualization & Policy Insights
+
+This phase translates our quantitative findings into publication-ready visual models that map the transmission mechanism, regional divergence, and evolving market vulnerability.
+
+* **Primary Notebook:** [`Heatflation_python.ipynb`](./Heatflation_python.ipynb)
+
+#### Core Visualizations:
+
+
+
+
 </details>
 
 <br>
