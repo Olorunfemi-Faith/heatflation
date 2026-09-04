@@ -109,20 +109,13 @@ Raw climate and market data contained redundant metadata, structural mismatches,
 
 <br>
 
-<table>
-  <tr>
-    <th width="50%"><b>Before Cleaning</b></th>
-    <th width="50%"><b>After Cleaning</b></th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="excel/food_prices_raw_1.png" alt="Before Cleaning Data" width="100%">
-    </td>
-    <td valign="top">
-      <img src="excel/food_prices_clean_1.png" alt="After Cleaning Data" width="100%">
-    </td>
-  </tr>
-</table>
+**Before Cleaning (Raw Data)**
+![Before Cleaning Data](./excel/food_prices_raw_1.png)
+
+---
+
+**After Cleaning (Processed Data)**
+![After Cleaning Data](./excel/food_prices_clean_1.png)
 
 
 #### **Data Cleaning Steps Executed**
