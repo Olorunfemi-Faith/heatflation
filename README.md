@@ -17,25 +17,23 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 - [ ] Phase 1: **Overview & Framework**
 <details>
 <summary><kbd> view phase 1 </kbd></summary>
-- ### Phase 1: Overview & Framework
+### Phase 1: Overview & Framework
 
 #### 1. What is Heatflation?
-"Heatflation" is a term coined in recent economic literature to describe food price inflation driven directly by extreme weather, droughts, and climate anomalies. While general inflation in Nigeria is often linked to currency devaluation or fuel costs, heatflation specifically isolates how weather shocks disrupt crop yields and drive up food prices in local markets.
+"Heatflation" is a term coined in recent economic literature to describe food price inflation driven directly by extreme weather, droughts, and climate anomalies. While general inflation in Nigeria is often linked to currency devaluation or fuel costs the role of weather in these price spikes usually goes unnoticed, heatflation models  how weather shocks disrupt crop yields and drive up food prices in local markets.
 
 ---
 
 #### 2. Scope of the Project
 * **Place (Kaduna & Kano):** These two states were selected because they serve as the primary grain production hubs and major commercial trading centers in Northern Nigeria, making them ideal representatives for regional food supply chains.
-* **Timeframe & Lag:** The analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact temporal coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to test transmission lags—measuring how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
+  They were also selected because Kaduna and Kano lies in the northern part of Nigeria which is notable for its sparse rainfall. Deviation from the normal rainfall could lead to severe crop loss. 
+* **Timeframe:** The analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact temporal coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to measure how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
 * **Commodity (White Maize):** White maize was chosen for four key reasons:
-  1. It had the highest data reporting frequency across historical market records.
+  1. It had one of the highest data reporting frequency across historical market records.
   2. It is a deeply rooted staple food consumed across households.
   3. It is highly sensitive to weather variations during critical growing stages.
   4. Its crop cycle is strictly bound to seasonal rainfall patterns.
-* **Variables:**
-  * **Real Price ($y_t$):** Nominal prices adjusted using the Consumer Price Index (CPI) to remove general currency inflation and isolate weather impacts.
-  * **Rainfall Anomaly ($\text{RFH}_t$):** Measures deviations from long-term rainfall averages to identify drought conditions.
-  * **Vegetation Anomaly ($\text{VIM}_t$):** Measures satellite-derived plant health deficits to track real-time crop stress.
+
 
 ---
 
