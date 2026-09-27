@@ -2,8 +2,7 @@
 
 ![Heatflation Image](images/HEATFLATION_1.png)
 
-A data engineering and analytics project leveraging SQL, Excel, and Python to model the relationship between rainfall anomalies and maize price fluctuations in Nigeria
-
+A data engineering and analytics project leveraging SQL, Excel, and Python to model the relationship between rainfall anomalies and maize price fluctuations in Nigeria. 
 
 
 ## Heatflation Project Work flow
@@ -21,14 +20,19 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 ### Phase 1: Overview & Framework
 
 #### 1. What is Heatflation?
-"Heatflation" is a term coined in recent economic literature to describe food price inflation driven directly by extreme weather, droughts, and climate anomalies. While general inflation in Nigeria is often linked to currency devaluation or fuel costs the role of weather in these price spikes usually goes unnoticed, heatflation models  how weather shocks disrupt crop yields and drive up food prices in local markets.
+"Heatflation" is a term coined in recent economic literature to describe food price inflation driven directly by extreme weather, droughts, and climate anomalies. While general inflation in Nigeria is often linked to currency devaluation or fuel costs, the role of weather in these price spikes usually goes unnoticed. Heatflation models  how weather shocks disrupt crop yields and drive up food prices in local markets. This project is a combination of four distinct data set. Rainfall, CPI, Food prices and NDVI. 
+
+---
+
+### 2. Summary of Workflow. 
+* 
 
 ---
 
 #### 2. Scope of the Project
 * **Place (Kaduna & Kano):** These two states were selected because they serve as the primary grain production hubs and major commercial trading centers in Northern Nigeria, making them ideal representatives for regional food supply chains.
-  They were also selected because Kaduna and Kano lies in the northern part of Nigeria which is notable for its sparse rainfall. Deviation from the normal rainfall could lead to severe crop loss. 
-* **Timeframe:** The analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact temporal coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to measure how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
+  They were also selected because Kaduna and Kano lies in the northern part of Nigeria, which is notable for it's sparse rainfall. Deviation from the normal rainfall could lead to severe crop loss. 
+* **Timefdata-driven analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to measure how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
 * **Commodity (White Maize):** White maize was chosen for four key reasons:
   1. It had one of the highest data reporting frequency across historical market records.
   2. It is a deeply rooted staple food consumed across households.
@@ -39,18 +43,17 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 ---
 
 #### 3. Goals of the Project
-The primary goal of this project is to build an empirical, data-driven narrative supported by five core visual models:
-1. **Biological & Economic Lags:** Map the 1-month biological delay (rain to crop health) and the 3–4 month economic delay (crop health to retail price spikes).
-2. **Spatial Divergence:** Compare price insulation and market resiliency between Kaduna and Kano states.
-3. **Seasonal Vulnerability:** Identify peak heatflation months ahead of harvest cycles to highlight household risk windows.
-4. **Historical Price Spikes:** Track annual real price trajectories over two decades to pin down major historical shock years.
-5. **Structural Vulnerability ($\beta$):** Analyze rolling 5-year price sensitivity to demonstrate how local drought impacts interact with national macroeconomic conditions over time.
+The primary goal of this project is to build an empirical, data-driven narrative supported by four core visual models:
+1. Map the 1-month biological delay (rain to crop health) and the 3–4 month economic delay (crop health to retail price spikes).
+2. Compare price insulation and market resiliency between Kaduna and Kano states.
+3. Identify peak heatflation months ahead of harvest cycles to highlight household risk windows.
+4. Track annual real price trajectories over two decades to pin down major historical shock years.
 
 ---
 
 #### 4. Problems Encountered
-* **Data Sourcing & Alignment:** Merging satellite climate measurements with ground-level retail market price records required handling missing entries and harmonizing different spatial and temporal scales.
-* **Data Cleaning & Standardization:** CPI metrics had to be matched across multiple base-year revisions to correctly convert nominal prices into inflation-adjusted real prices over a 20-year span.
+* Merging satellite climate measurements with ground-level retail market price records required handling missing entries and harmonizing different spatial and temporal scales.
+* CPI metrics had to be matched across multiple base-year revisions to correctly convert nominal prices into inflation-adjusted real prices over a 20-year span.
 
 </details>
 
@@ -67,12 +70,12 @@ The primary goal of this project is to build an empirical, data-driven narrative
 
 ### Phase 2: Data Collection & Assembly
 
-We constructed a monthly panel dataset combining satellite climate metrics and macroeconomic market data across **Kaduna and Kano State**.
+Constructed a monthly panel dataset combining satellite climate metrics and macroeconomic market data across **Kaduna and Kano State**.
 
  The 4 Secondary Data Sources
 * **Rainfall Data (CHIRPS / HDX):** Monthly rainfall totals used to calculate rainfall anomalies (`rfh_anomaly`).  
   🔗 [HDX Nigeria Subnational Rainfall Data](https://data.humdata.org/dataset/nga-rainfall-subnational)
-* **Vegetation Data (MODIS / WFP Datastream):** Satellite crop health metrics (NDVI) used to calculate vegetation index margin anomalies (`vim_anomaly`).  
+* **Vegetation Data:** Satellite crop health metrics (NDVI) used to calculate vegetation index margin anomalies (`vim_anomaly`).  
   🔗 [WFP VAM DataViz / Seasonal Explorer](https://dataviz.vam.wfp.org/)
 * **Market Price Data (WFP VAM / HDX):** Retail white maize prices (NGN/kg) in Kaduna and Kano markets.  
   🔗 [HDX WFP Food Prices for Nigeria](https://data.humdata.org/dataset/wfp-food-prices-for-nigeria)
