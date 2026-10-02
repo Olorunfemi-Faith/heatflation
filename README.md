@@ -32,7 +32,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 #### 2. Scope of the Project
 * **Place (Kaduna & Kano):** These two states were selected because they serve as the primary grain production hubs and major commercial trading centers in Northern Nigeria, making them ideal representatives for regional food supply chains.
   They were also selected because Kaduna and Kano lies in the northern part of Nigeria, which is notable for it's sparse rainfall. Deviation from the normal rainfall could lead to severe crop loss. 
-* **Timefdata-driven analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to measure how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
+* **Time** data-driven analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to measure how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
 * **Commodity (White Maize):** White maize was chosen for four key reasons:
   1. It had one of the highest data reporting frequency across historical market records.
   2. It is a deeply rooted staple food consumed across households.
@@ -197,6 +197,13 @@ To prepare the raw market data, I used Excel to clean, filter, and organize the 
 
 
 **Database Architecture:** [SQL Script](./sql.sql)
+
+Problem: The raw weather and price data were in separate tables and measured on different schedules, making it impossible to see how drought directly affected grain prices over time.
+
+What the Code Did:  SQL script cleaned and aligned the datasets, matched every month's rainfall and plant health scores to white maize prices across Kaduna and Kano, and created time-delayed (lagged) columns to trace weather effects across 1 to 4 months.
+
+What was Gotten: A clean, master dataset that made it easy to run regressions and visually prove that rainfall deficits take about 4 months to fully push up retail market prices.
+
 </details>
 
 
