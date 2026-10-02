@@ -270,6 +270,8 @@ This phase translates our quantitative findings into publication-ready visual mo
 
 <details>
 <summary> Conclusion </summary>
+This project proves that bad weather in Northern Nigeria doesn't instantly raise food prices—it takes about 4 months for a drought to actually hit family wallets at the market. That 4-month gap is a game-changer. It means government leaders and aid groups don't have to wait for price spikes to happen; they can see rainfall drops coming and release grain reserves early to keep white maize affordable for everyday households.
+  
 </details>
 
 
