@@ -28,11 +28,11 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 
 The goal of this project is to show how extreme weather drives up food prices in Northern Nigeria by using a 3-step data pipeline:
 
-* **Excel**: Clean and standardize 20 years (2003–2023) of rainfall, crop health (NDVI), inflation (CPI), and white maize price data.
+ **Excel**: Clean and standardize 20 years (2003–2023) of rainfall, crop health (NDVI), inflation (CPI), and white maize price data.
 
-* **SQL**: Merge the datasets into one database and create time-delayed columns to track weather impacts across 1 to 4 months.
+ **SQL**: Merge the datasets into one database and create time-delayed columns to track weather impacts across 1 to 4 months.
 
-* **Python**: Build clear visual charts to show:
+ **Python**: Build clear visual charts to show:
 
 * Transmission Lag: How a rainfall drop takes 4 months to push up retail market prices.
 
