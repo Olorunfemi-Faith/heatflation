@@ -40,37 +40,29 @@ The goal of this project is to show that climate-inflation connection exists by 
 
 * Peak Months: The exact pre-harvest months when heatflation hits hardest.
 
-* Price Trajectories: Major historical shock years over the 20-year period.
+* Price Trajectories: Major historical shock years over the 20-year
+
+---
+
+#### 3. Datasets that were used and why?
+
+We used four key datasets to build a complete picture of weather-driven food inflation:
+
+Rainfall Data: Used instead of temperature because rain deficits (droughts) are the direct cause of crop failure and water stress in Northern Nigerian rain-fed agriculture.
+
+Consumer Price Index (CPI): Used to convert raw (nominal) food prices into inflation-adjusted (real) prices, removing general currency devaluation so we could isolate true weather shocks.
+
+Normalized Difference Vegetation Index (NDVI): Used as a satellite measure of plant health to track real-time crop stress and map the 1-month biological delay before prices react.
+
+Food Market Prices (White Maize): Used white maize retail prices because maize is a major staple food in Kaduna and Kano, highly sensitive to weather, and regularly tracked over the 20-year timeline (2003–2023).
+
+
+
 
 
 
 ---
 
-#### 2. Scope of the Project
-* **Place (Kaduna & Kano):** These two states were selected because they serve as the primary grain production hubs and major commercial trading centers in Northern Nigeria, making them ideal representatives for regional food supply chains.
-  They were also selected because Kaduna and Kano lies in the northern part of Nigeria, which is notable for it's sparse rainfall. Deviation from the normal rainfall could lead to severe crop loss. 
-* **Time** data-driven analysis covers monthly historical data from **2003 to 2023**. This timeline was chosen because it represents the exact coverage available in our compiled dataset. Tracking 20 years of monthly data allowed us to measure how many months it takes for a rainfall deficit to travel through crop yields and ultimately hit market prices.
-* **Commodity (White Maize):** White maize was chosen for four key reasons:
-  1. It had one of the highest data reporting frequency across historical market records.
-  2. It is a deeply rooted staple food consumed across households.
-  3. It is highly sensitive to weather variations during critical growing stages.
-  4. Its crop cycle is strictly bound to seasonal rainfall patterns.
-
-
----
-
-#### 3. Goals of the Project
-The primary goal of this project is to build an empirical, data-driven narrative supported by four core visual models:
-1. Map the 1-month biological delay (rain to crop health) and the 3–4 month economic delay (crop health to retail price spikes).
-2. Compare price insulation and market resiliency between Kaduna and Kano states.
-3. Identify peak heatflation months ahead of harvest cycles to highlight household risk windows.
-4. Track annual real price trajectories over two decades to pin down major historical shock years.
-
----
-
-#### 4. Problems Encountered
-* Merging satellite climate measurements with ground-level retail market price records required handling missing entries and harmonizing different spatial and temporal scales.
-* CPI metrics had to be matched across multiple base-year revisions to correctly convert nominal prices into inflation-adjusted real prices over a 20-year span.
 
 </details>
 
