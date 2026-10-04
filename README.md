@@ -26,7 +26,7 @@ A data engineering and analytics project leveraging SQL, Excel, and Python to mo
 
 ### 2. Goal of the Project. 
 
-The goal of this project is to show how extreme weather drives up food prices in Northern Nigeria by using a 3-step data pipeline:
+The goal of this project is to show that climate-inflation connection exists by using a 3-step data pipeline
 
  **Excel**: Clean and standardize 20 years (2003–2023) of rainfall, crop health (NDVI), inflation (CPI), and white maize price data.
 
