@@ -286,7 +286,9 @@ This phase translates our quantitative findings into publication-ready visual mo
 
 <details>
 <summary> Conclusion </summary>
-This project proves that bad weather in Northern Nigeria doesn't instantly raise food prices—it takes about 4 months for a drought to actually hit family wallets at the market. That 4-month gap is a game-changer. It means government leaders and aid groups don't have to wait for price spikes to happen; they can see rainfall drops coming and release grain reserves early to keep white maize affordable for everyday households.
+This project shows how severe weather can drive up food prices in Northern Nigeria by examining white maize markets in Kaduna and Kano from 2003 to 2023. Rather than food price spikes occurring without pattern, the research indicates that weather shocks often follow a 4-month transmission delay before significantly affecting local markets. First, there is typically a 1-month delay where a rainfall deficit creates crop stress in the field, which can be monitored using satellite images of plant health. This is followed by a 3-to-4-month delay post-harvest as stored grain reserves gradually deplete, which tends to push market prices higher during the pre-harvest lean season from June to August.
+
+To distinguish weather impacts from background macroeconomic factors like general inflation or currency devaluation, nominal food prices were adjusted using the Consumer Price Index (CPI). This highlighted prominent heatflation shock years—most notably in 2012, 2016, and 2020–2021—when real food prices rose substantially above baseline trends. Looking ahead, statistical models suggest an increasing sensitivity of food prices to rainfall anomalies, projecting a likelihood of more frequent price fluctuations and notable divergence between regional markets. Because satellite crop data provides a 4-month early warning window before retail price surges fully materialize, policymakers and humanitarian organizations have an opportunity to pre-emptively release grain reserves and support vulnerable communities.
   
 </details>
 
